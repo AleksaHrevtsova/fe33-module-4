@@ -1,0 +1,371 @@
+/* переменные - удалить при подключении отдельного файла с переменными */
+:root {
+  --white-text: rgba(255, 255, 255, 1);
+
+  --grey-text: rgba(157, 164, 189, 1);
+  --grey-text-op60: rgba(157, 164, 189, 0.6);
+  --grey-text-op40: rgba(157, 164, 189, 0.4);
+
+  --graphite: rgba(48, 48, 48, 1);
+  --graphite-light: rgba(85, 85, 85, 1);
+
+  --orange: rgba(255, 108, 0, 1);
+
+  --back-light-grey: rgba(247, 247, 247, 1);
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО ДОКУМЕНТА */
+/* границы сделаны для определения границ структурных элементов документа */
+header,
+section,
+footer {
+  border: 1px solid;
+}
+
+/* применяем основное семейство шрифтов для всего документа и ссылок */
+body,
+a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+/* общие стили для всех предзаголовков */
+.pretitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* переназначаем шрифт для заголовков секций через общий класс */
+.title {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* общие стили для всех предзаголовков */
+.short-desc {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+}
+
+.online-sign {
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background: transparent;
+  color: var(--white-text);
+
+  padding: 12px 20px;
+}
+
+.online-sign:hover,
+.online-sign:focus {
+  background-color: var(--orange);
+  color: var(--white-text);
+}
+
+/* === HEADER === */
+.header {
+  /* временный бэкграунд */
+  background-color: black;
+  color: white;
+}
+
+.header-nav,
+.nav-list,
+.contacts-list,
+.media-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  padding-top: 28px;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.nav-list li {
+  margin-left: 40px;
+}
+
+.contacts-list {
+  margin-left: 322px;
+}
+
+.contacts-list li:last-child {
+  margin-left: 40px;
+}
+
+.media-list {
+  position: absolute;
+  bottom: -399px;
+  left: -42px;
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+
+.media-list li {
+  margin-left: 40px;
+}
+
+.header a {
+  color: var(--white-text);
+  font-size: 12px;
+}
+
+.nav-link:hover {
+  color: var(--orange);
+}
+
+/* === HERO === */
+.hero .container {
+  position: relative;
+  /* временный бэкграунд */
+  background: black;
+
+  padding-top: 184px;
+  padding-left: 215px;
+}
+
+.hero-pretitle {
+  color: var(--grey-text-op60);
+}
+
+.hero-title {
+  font-size: 72px;
+  line-height: 1.181;
+
+  letter-spacing: 0.05em;
+
+  color: var(--white-text);
+
+  margin: 20px 0;
+}
+
+.hero-desc {
+  color: var(--grey-text);
+
+  margin: 0;
+  margin-bottom: 142px;
+  /* width: 486px; */
+  width: 480px;
+}
+
+.hero-btns {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.hero-btn:last-child {
+  margin-left: 26px;
+}
+
+.hero-btn {
+  border: none;
+  background: transparent;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+
+  color: var(--grey-text-op60);
+}
+
+.hero-btn:hover,
+.hero-btn:focus,
+.hero-btn:active {
+  color: var(--white-text);
+}
+
+/* === ABOUT === */
+.about a,
+.about-pretitle,
+.about-title {
+  color: var(--graphite);
+}
+
+.about-desc {
+  color: var(--graphite-light);
+}
+
+/* === SERVICES === */
+.services {
+  background-color: black;
+}
+
+.services a {
+  color: var(--white-text);
+}
+
+.services-pretitle {
+  color: var(--grey-text-op60);
+}
+
+.services-title {
+  color: var(--white-text);
+}
+
+.table td {
+  color: var(--grey-text);
+}
+
+/* === OLDSCHOOL === */
+.oldschool-pretitle,
+.showlist-num,
+.showlist-text {
+  color: var(--graphite);
+}
+
+.oldschool-desc {
+  color: var(--graphite-light);
+}
+
+.showlist li {
+  background: var(--back-light-grey);
+}
+
+.showlist-num {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+
+  letter-spacing: 0.05em;
+}
+
+.showlist-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+/* === MASTERS === */
+.masters {
+  background: var(--back-light-grey);
+}
+
+.masters-pretitle,
+.masters-title {
+  color: var(--graphite);
+}
+
+.master-name {
+  font-size: 18px;
+  line-height: 1.39;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--graphite);
+}
+
+.master-position {
+  font-size: 14px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--orange);
+}
+
+/* === BARBA === */
+.barba-pretitle {
+  color: var(--graphite);
+}
+
+/* === CONTACTS === */
+.contacts {
+  background: rgba(25, 28, 38, 1);
+}
+
+.contacts-title {
+  color: var(--white-text);
+}
+
+.signform input::placeholder,
+.signform textarea::placeholder {
+  color: var(--grey-text-op40);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+}
+
+.signform input,
+.signform textarea {
+  color: var(--grey-text-op40);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--grey-text-op40);
+}
+
+.signform input:active,
+.signform textarea:active {
+  color: var(--white-text);
+}
+
+.contacts a,
+.worktime {
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+
+  color: var(--grey-text);
+}
+
+.worktime-title {
+  color: var(--white-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* === FOOTER === */
+.footer p,
+.footer a {
+  color: var(--grey-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.2em;
+}
+
+.footer a {
+  color: var(--graphite);
+}

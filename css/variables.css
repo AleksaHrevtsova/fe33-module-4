@@ -1,0 +1,15 @@
+:root {
+  --white-text: rgba(255, 255, 255, 1);
+
+  --grey-text: rgba(157, 164, 189, 1);
+  --grey-text-op60: rgba(157, 164, 189, 0.6);
+  --grey-text-op40: rgba(157, 164, 189, 0.4);
+
+  --graphite: rgba(48, 48, 48, 1);
+  --graphite-light: rgba(85, 85, 85, 1);
+
+  --orange: rgba(255, 108, 0, 1);
+
+  --back-light-grey: rgba(247, 247, 247, 1);
+}
+
